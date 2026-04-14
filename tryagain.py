@@ -37,8 +37,8 @@ def send_command(command):
     v, omega = 0.0, 0.0
     if command == "forward":   v = 0.3
     elif command == "backward": v = -0.3
-    elif command == "left":    v, omega = 0.2, 2.0
-    elif command == "right":   v, omega = 0.2, -2.0
+    elif command == "left":    v, omega = 0.2, -2.0
+    elif command == "right":   v, omega = 0.2, 2.0
 
     topic.publish(roslibpy.Message({
         'header': {'stamp': {'secs': 0, 'nsecs': 0}, 'frame_id': ''},
